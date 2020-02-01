@@ -16,7 +16,8 @@ public class MDFileWriter {
 		writer.write("hahah");
 		writer.close();
 	}
-	public static void main(String[] args) {
-
+	public static void main(String[] args) throws IOException {
+		MDFileWriter fileWriter = new MDFileWriter();
+		fileWriter.writeMDFile();
 	}
 }
