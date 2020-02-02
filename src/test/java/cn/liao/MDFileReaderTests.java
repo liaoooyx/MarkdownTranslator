@@ -19,7 +19,7 @@ public class MDFileReaderTests {
 	@BeforeAll
 	static void configuration() throws FileNotFoundException {
 		MDFileReader fileReader = new MDFileReader();
-		contentList = fileReader.getFileContext();
+		contentList = fileReader.getFileContextList();
 	}
 
 

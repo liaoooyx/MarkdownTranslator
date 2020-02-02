@@ -20,7 +20,7 @@ public class TranslatorTest {
 
 	@Test
 	void translate(){
-		TranslateTextResponse response = Translator.translateText("liao-266522", "global", "test", "en", "zh");
+		TranslateTextResponse response = Translator.remoteInvokeGoogleAPI("liao-266522", "global", "test", "en", "zh");
 		String translatedText = response.getTranslationsList().get(0).getTranslatedText();
 		assertThat(translatedText,is(equalTo("测试")));
 	}

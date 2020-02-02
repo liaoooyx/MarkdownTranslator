@@ -1,5 +1,8 @@
 package cn.liao;
 
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * Created by Yuxiang Liao on 2020-01-29 17:04.
  */
@@ -70,13 +73,11 @@ public class Test {
 			"\n" + "### IaaS的示例\n" + "\n" +
 			"IaaS的流行示例包括[DigitalOcean]（https://www.digitalocean.com/），[Linode]（https://www.linode.com/），[Rackspace]（https://www.rackspace.com /），[Amazon Web Services（AWS）]（https://aws.amazon.com/），[Cisco Metacloud]（https://www.cisco.com/c/en/us/products/cloud-systems -management / metacloud / index.html），[Microsoft Azure]（https://azure.microsoft.com/en-us/）和[Google Compute Engine（GCE）]（https://cloud.google.com /计算/）。\n";
 	public static void main(String[] args) {
-		String s = "123\r\n";
-		String a = "asd\n";
-		System.out.printf("hahaha,%s,%s,hahah\n",s,a);
-		System.out.print("\\n的效果\n");
-		System.out.print("\\r的效果\r");
-		System.out.print("\\r\\n的效果\r\n");
-		System.out.print("\\n\\r的效果\n\r");
-		System.out.print("结束");
+		//compare
+		String[] list = translatedText.split("\n");
+//		Arrays.stream(list).forEach(System.out::print);
+		List<String> list1 = Arrays.asList(list);
+//		list1.stream().forEach(System.out::println);
+
 	}
 }

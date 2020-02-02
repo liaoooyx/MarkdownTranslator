@@ -5,8 +5,6 @@ import org.apache.commons.lang3.text.StrBuilder;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -17,7 +15,7 @@ public class MDFileReader {
 
 	private String path = "/Users/liao/Desktop/02_ SaaS, PaaS, IaaS.md";
 
-	public List<String> getFileContext() throws FileNotFoundException {
+	public List<String> getFileContextList() throws FileNotFoundException {
 		BufferedReader in = new BufferedReader(new FileReader(path));
 		List<String> contentList = in.lines().collect(Collectors.toList());
 		return contentList;
@@ -33,7 +31,7 @@ public class MDFileReader {
 	}
 
 	public String getFileContextString() throws FileNotFoundException {
-		return listToString(getFileContext());
+		return listToString(getFileContextList());
 	}
 
 	public static void main(String[] args) throws FileNotFoundException {
