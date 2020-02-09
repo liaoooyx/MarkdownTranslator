@@ -5,8 +5,9 @@ import java.util.List;
 
 public class MarkdownFile {
 
-	private String fileName;
-	private String filePath;
+	private String fileName = "02_ SaaS, PaaS, IaaS.md";
+	private String filePath = "/Users/liao/OneDrive - University of Leeds/Cloud Computing/笔记";
+	private String fullPath;
 
 	// for translating purpose
 	private String originalText;
@@ -16,9 +17,22 @@ public class MarkdownFile {
 	private List<String> originalList;
 	private List<String> translatedList;
 
+	public MarkdownFile(){
+		setFullPath(filePath+"/"+fileName);
+	}
+
 	public MarkdownFile(String filePath,String fileName) {
 		this.filePath = filePath;
 		this.fileName = fileName;
+		setFullPath(filePath+"/"+fileName);
+	}
+
+	public String getFullPath() {
+		return fullPath;
+	}
+
+	public void setFullPath(String fullPath) {
+		this.fullPath = fullPath;
 	}
 
 	public String getFileName() {

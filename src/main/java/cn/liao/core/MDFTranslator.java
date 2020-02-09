@@ -1,6 +1,11 @@
 package cn.liao.core;
 
-public interface MDFTranslator {
+public class MDFTranslator {
 
-	public void translate(MarkdownFile mdFile);
+	public static void translate(MarkdownFile mdFile) {
+		GoogleTranslator googleTranslator = new GoogleTranslator();
+		String text = googleTranslator.translate(mdFile.getOriginalText());
+		mdFile.setTranslatedText(text);
+	}
+
 }
