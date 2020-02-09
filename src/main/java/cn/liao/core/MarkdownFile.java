@@ -1,8 +1,9 @@
-package cn.liao.api;
+package cn.liao.core;
 
+import java.util.Arrays;
 import java.util.List;
 
-public abstract class MarkdownFile {
+public class MarkdownFile {
 
 	private String fileName;
 	private String filePath;
@@ -15,9 +16,9 @@ public abstract class MarkdownFile {
 	private List<String> originalList;
 	private List<String> translatedList;
 
-	public MarkdownFile(String fileName, String filePath) {
-		this.fileName = fileName;
+	public MarkdownFile(String filePath,String fileName) {
 		this.filePath = filePath;
+		this.fileName = fileName;
 	}
 
 	public String getFileName() {
@@ -80,8 +81,20 @@ public abstract class MarkdownFile {
 		this.translatedList = translatedList;
 	}
 
-	public abstract List<String> stringToList(String tempStr);
+	public List<String> stringToList(String tempStr) {
+		return Arrays.asList(tempStr.split("\n"));
+	}
 
-	public abstract String listToString(List<String> tempList);
+
+	public String listToString(List<String> tempList) {
+		StringBuilder strBuilder = new StringBuilder();
+		tempList.stream().forEach(s -> {
+			if ("".equals(s))
+				strBuilder.append("\n");
+			else
+				strBuilder.append(s).append("\n");
+		});
+		return strBuilder.toString();
+	}
 
 }

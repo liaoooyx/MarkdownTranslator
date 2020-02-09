@@ -1,4 +1,4 @@
-package cn.liao.api;
+package cn.liao.core;
 
 public interface DMFWriter {
 
