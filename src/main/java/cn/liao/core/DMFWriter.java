@@ -14,11 +14,12 @@ public class DMFWriter {
 		BufferedWriter writer = new BufferedWriter(new FileWriter(outputPath));
 		for (int i = 0; i < olist.size(); i++) {
 			writer.write(olist.get(i));
+			// .newLine() is not a legal line feed in .md file, where \r\n is.
 			writer.newLine();
 			String str = tList.get(i);
 			if (!str.startsWith("#")){
 				writer.write(str);
-				writer.newLine();
+				writer.write("\r\n");
 			}
 			if (i % 50 == 0) {
 				writer.flush();

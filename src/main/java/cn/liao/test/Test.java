@@ -1,5 +1,8 @@
 package cn.liao.test;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -74,15 +77,25 @@ public class Test {
 			"\n" + "### IaaS的示例\n" + "\n" +
 			"IaaS的流行示例包括[DigitalOcean]（https://www.digitalocean.com/），[Linode]（https://www.linode.com/），[Rackspace]（https://www.rackspace.com /），[Amazon Web Services（AWS）]（https://aws.amazon.com/），[Cisco Metacloud]（https://www.cisco.com/c/en/us/products/cloud-systems -management / metacloud / index.html），[Microsoft Azure]（https://azure.microsoft.com/en-us/）和[Google Compute Engine（GCE）]（https://cloud.google.com /计算/）。\n";
 	private String  string;
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 //		//compare
 //		String[] list = translatedText.split("\n");
 ////		Arrays.stream(list).forEach(System.out::print);
 //		List<String> list1 = Arrays.asList(list);
 ////		list1.stream().forEach(System.out::println);
 
-		Test test = new Test();
-		List list = new ArrayList();
-		System.out.println(test.string.equals(""));
+//		Test test = new Test();
+//		List list = new ArrayList();
+//		System.out.println(test.string.equals(""));
+
+		BufferedWriter writer = new BufferedWriter(new FileWriter("/Users/liao/Desktop/test1.md"));
+		writer.write("111");
+		writer.write("\r\n");
+		writer.write("222");
+		writer.newLine();
+		writer.write("333");
+//		writer.write("444");
+		writer.flush();
+		writer.close();
 	}
 }
