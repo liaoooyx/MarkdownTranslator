@@ -1,4 +1,4 @@
-package cn.liao;
+package cn.liao.test;
 
 
 import com.google.cloud.translate.v3beta1.LocationName;

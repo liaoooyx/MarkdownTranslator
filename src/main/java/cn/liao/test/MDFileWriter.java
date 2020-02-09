@@ -1,4 +1,4 @@
-package cn.liao;
+package cn.liao.test;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

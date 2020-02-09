@@ -1,5 +1,6 @@
 package cn.liao;
 
+import cn.liao.test.Translator;
 import com.google.cloud.translate.v3beta1.TranslateTextResponse;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;

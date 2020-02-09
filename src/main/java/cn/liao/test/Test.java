@@ -1,5 +1,6 @@
-package cn.liao;
+package cn.liao.test;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -72,12 +73,16 @@ public class Test {
 			"-**多租户安全性。**由于硬件资源是在可用时在用户之间动态分配的，因此要求供应商确保其他客户无法访问以前客户存放在存储资产中的数据。同样，客户必须依靠供应商来确保VM在多租户云架构中得到充分隔离。\n" +
 			"\n" + "### IaaS的示例\n" + "\n" +
 			"IaaS的流行示例包括[DigitalOcean]（https://www.digitalocean.com/），[Linode]（https://www.linode.com/），[Rackspace]（https://www.rackspace.com /），[Amazon Web Services（AWS）]（https://aws.amazon.com/），[Cisco Metacloud]（https://www.cisco.com/c/en/us/products/cloud-systems -management / metacloud / index.html），[Microsoft Azure]（https://azure.microsoft.com/en-us/）和[Google Compute Engine（GCE）]（https://cloud.google.com /计算/）。\n";
+	private String  string;
 	public static void main(String[] args) {
-		//compare
-		String[] list = translatedText.split("\n");
-//		Arrays.stream(list).forEach(System.out::print);
-		List<String> list1 = Arrays.asList(list);
-//		list1.stream().forEach(System.out::println);
+//		//compare
+//		String[] list = translatedText.split("\n");
+////		Arrays.stream(list).forEach(System.out::print);
+//		List<String> list1 = Arrays.asList(list);
+////		list1.stream().forEach(System.out::println);
 
+		Test test = new Test();
+		List list = new ArrayList();
+		System.out.println(test.string.equals(""));
 	}
 }

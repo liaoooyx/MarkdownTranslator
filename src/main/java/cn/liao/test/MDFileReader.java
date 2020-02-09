@@ -1,4 +1,4 @@
-package cn.liao;
+package cn.liao.test;
 
 import org.apache.commons.lang3.text.StrBuilder;
 
